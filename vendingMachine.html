@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>메가 자판기</title>
+    <link rel="stylesheet" href="css/colorChange.css">
+</head>
+<body>
+    <div class="coinbutton">
+        <button type="button" id="insert100" value="100" onclick="clickCoinButton(value)">100원 투입</button>
+        <button type="button" id="insert500" value="500" onclick="clickCoinButton(value)">500원 투입</button>
+        <button type="button" id="insert1000" value="1000" onclick="clickCoinButton(value)">1000원 투입</button>
+    </div>
+
+    <p></p>
+
+    <div>자판기 총 잔액<input readonly="text" id="machineCoin" /></div>
+    <div>투입금액<input readonly="text" id="insertCoin" /></div>
+    <div>내 지갑<input readonly="text" id="myWallet" /></div>
+
+    <p></p>
+
+    <div id="Obj">
+
+    </div>
+
+    <p></p>
+
+    <div>
+        <textarea
+          readonly="text"
+          id="screen"
+          style="width: 90%; height: 300px; resize: none; border-width: 4px;"
+        ></textarea>
+    </div>
+
+<script src="js/vendingMachine.js"></script>    
+</body>
+</html>
