@@ -57,7 +57,6 @@ function writeHTML(menuObj) {
         let button = document.createElement('button');
         
         button.type = 'button';
-        button.id = menu.id;
         button.value = menu.price;
         button.innerHTML = menu.name + "(" + menu.price + "원, 재고 수 : " + menu.stack + ")";
         addButtonFunction(button, menu);
@@ -101,14 +100,10 @@ function colorChange(insert) {
     let arrButton = document.querySelectorAll("button");
 
     for(let i = 0; i < arrButton.length; i++) {
-        if(insert >= arrButton[i].value) {
+        if(arrButton[i].name != "coin" && insert >= arrButton[i].value) {
             arrButton[i].setAttribute('class', 'done');
         }
     }
-
-    document.getElementById('insert100').classList.remove('done')
-    document.getElementById('insert500').classList.remove('done')
-    document.getElementById('insert1000').classList.remove('done')
 }
 
 function colorReset() {

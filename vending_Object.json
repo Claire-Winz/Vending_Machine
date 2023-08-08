@@ -2,43 +2,36 @@
     {
       "name":"코카콜라",
       "stack":5,
-      "price":700,
-      "id":"coke"
+      "price":700
     },
     {
       "name":"오렌지주스",
       "stack":5,
-      "price":1200,
-      "id":"orange"
+      "price":1200
     },
     {
       "name":"커피",
       "stack":5,
-      "price":500,
-      "id":"coffee"
+      "price":500
     },
     {
       "name":"물",
       "stack":5,
-      "price":700,
-      "id":"water"
+      "price":700
     },
     {
       "name":"옥수수수염차",
       "stack":5,
-      "price":1200,
-      "id":"tea"
+      "price":1200
     },
     {
       "name":"밀키스",
       "stack":5,
-      "price":700,
-      "id":"milkis"
+      "price":700
     },
     {
       "name":"트레비",
       "stack":5,
-      "price":1000,
-      "id":"trevi"
+      "price":1000
     }
   ]
