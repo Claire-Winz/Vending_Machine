@@ -98,44 +98,23 @@ function addButtonFunction(button, menu) {
 }
 
 function colorChange(insert) {
-    const coke = document.getElementById('coke');
-    const orange = document.getElementById('orange');
-    const coffee = document.getElementById('coffee');
-    const water = document.getElementById('water');
-    const tea = document.getElementById('tea');
-    const milkis = document.getElementById('milkis');
-    const trevi = document.getElementById('trevi');
+    let arrButton = document.querySelectorAll("button");
 
-    if (insert >= 1200) {
-        coke.setAttribute('class', 'done');
-        orange.setAttribute('class', 'done');
-        coffee.setAttribute('class', 'done');
-        water.setAttribute('class', 'done');
-        tea.setAttribute('class', 'done');
-        milkis.setAttribute('class', 'done');
-        trevi.setAttribute('class', 'done');
-    } else if (insert >= 1000) {
-        coke.setAttribute('class', 'done');
-        coffee.setAttribute('class', 'done');
-        water.setAttribute('class', 'done');
-        milkis.setAttribute('class', 'done');
-        trevi.setAttribute('class', 'done');
-    } else if (insert >= 700) {
-        coke.setAttribute('class', 'done');
-        coffee.setAttribute('class', 'done');
-        water.setAttribute('class', 'done');
-        milkis.setAttribute('class', 'done');
-    } else if (insert >= 500) {
-        coffee.setAttribute('class', 'done');
+    for(let i = 0; i < arrButton.length; i++) {
+        if(insert >= arrButton[i].value) {
+            arrButton[i].setAttribute('class', 'done');
+        }
     }
+
+    document.getElementById('insert100').classList.remove('done')
+    document.getElementById('insert500').classList.remove('done')
+    document.getElementById('insert1000').classList.remove('done')
 }
 
 function colorReset() {
-    document.getElementById('coke').classList.remove('done');
-    document.getElementById('orange').classList.remove('done');
-    document.getElementById('coffee').classList.remove('done');
-    document.getElementById('water').classList.remove('done');
-    document.getElementById('tea').classList.remove('done');
-    document.getElementById('milkis').classList.remove('done');
-   document.getElementById('trevi').classList.remove('done');
+    let arrButton = document.querySelectorAll("button");
+
+    for(let i = 0; i < arrButton.length; i++) {
+        arrButton[i].classList.remove('done');
+    }
 }
